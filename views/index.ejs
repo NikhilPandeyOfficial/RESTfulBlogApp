@@ -1,28 +1,29 @@
 <% include partials/header %>
 
-
+<section>Nikhil</section>
 <div class="ui main text container">
     <div class="ui huge header">RESTful Blog App</div>
     <div class="ui top attached segment">
         <div class="ui divided items">
             <% blogs.forEach(function(blog){ %>
-                <div class="item">
-                    <div class="image">           
-                        <img src="<%= blog.image %>">
-                    </div>
-                    <div class="content">
-                        <a href="/blogs/<%= blog._id%>" class="header"> <%= blog.name %> </a>
-                        <div class="meta">
-                            <a href="/blogs/<%= blog._id %>"> <%= blog.created.toDateString() %> </a>
-                        </div>
-                        <div class="description">
-                                <a>  <%- blog.body.substring(0,100) %>... </a>
-                        </div>  
-                        <div class="extra">
-                            <a class="ui floated basic violet button" href="/blogs/<%= blog._id %>">Read More<i class="arrow circle right icon"></i></a>
-                        </div>                  
-                    </div>                    
+            <div class="item">
+                <div class="image">
+                    <img src="<%= blog.image %>">
                 </div>
+                <div class="content">
+                    <a href="/blogs/<%= blog._id%>" class="header"> <%= blog.name %> </a>
+                    <div class="meta">
+                        <a href="/blogs/<%= blog._id %>"> <%= blog.created.toDateString() %> </a>
+                    </div>
+                    <div class="description">
+                        <a> <%- blog.body.substring(0,100) %>... </a>
+                    </div>
+                    <div class="extra">
+                        <a class="ui floated basic violet button" href="/blogs/<%= blog._id %>">Read More<i
+                                class="arrow circle right icon"></i></a>
+                    </div>
+                </div>
+            </div>
             <% }); %>
         </div>
 
